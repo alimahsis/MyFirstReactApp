@@ -1,0 +1,19 @@
+Setup:
+	[ get github.com > {project} > .gitignore > node ]
+	[ add .gitignore file and paste ]
+	git init
+	git add .
+	git status
+	git config --global user.email "alimahsis@yahoo.com"
+	git commit -m "first commit"
+	git remote add origin https://github.com/alimahsis/MyFirstReactApp.git
+	git push -u origin master
+
+After Edit:
+	git add .
+	git commit -m "first commit"
+	git push -u origin master
+
+Add Pc:
+	git clone https://github.com/alimahsis/MyFirstReactApp.git
+
