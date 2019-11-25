@@ -15,5 +15,5 @@ After Edit:
 	git push -u origin master
 
 Add Pc:
-	git clone https://github.com/alimahsis/MyFirstReactApp.git
+	git clone --depth 1 https://github.com/alimahsis/MyFirstReactApp.git
 

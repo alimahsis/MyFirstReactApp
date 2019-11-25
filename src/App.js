@@ -1,27 +1,27 @@
 import React, { Component } from "react";
-import Cart from "./components/Cart";
+import Menu from "./layouts/Menu";
+import {BrowserRouter, Route} from 'react-router-dom';
+import Router from "./Router";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      page: "home"
     };
 
   }
 
-  routePage = pageName => {
-    this.setState({
-      page: pageName
-    });
-  };
-
   render() {
     return (
-      <React.Fragment>
-        <Cart></Cart>
-      </React.Fragment>
+      <>
+        <BrowserRouter>
+          <Menu></Menu>
+          <main className="container">
+            <Router></Router>
+          </main>
+        </BrowserRouter>
+      </>
     );
   }
 }

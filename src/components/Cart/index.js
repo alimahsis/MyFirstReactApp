@@ -17,6 +17,14 @@ class Index extends Component {
         }
     }
 
+    componentDidUpdate() {
+        localStorage.setItem('state', JSON.stringify(this.state));
+    }
+
+    componentDidMount() {
+        this.setState( JSON.parse(localStorage.getItem('state')) );
+    }
+
     handleDelete = counterId => {
         this.setState({counters: this.state.counters.filter(c => c.id !== counterId)});
     }
@@ -61,15 +69,13 @@ class Index extends Component {
                     totalProduct={ this.state.counters.filter( p => p.value > 0 ).length }
                     onInsert={ this.handleInsert }
                 ></Navbar>
-                <main className="container">
-                    <Counters
-                        counters={this.state.counters}
-                        onDelete={this.handleDelete}
-                        onIncrement={this.handleIncrement}
-                        onDecrement={this.handleDecrement}
-                        onChangeTitle={this.handleChangeTitle}
-                    ></Counters>
-                </main>
+                <Counters
+                    counters={this.state.counters}
+                    onDelete={this.handleDelete}
+                    onIncrement={this.handleIncrement}
+                    onDecrement={this.handleDecrement}
+                    onChangeTitle={this.handleChangeTitle}
+                ></Counters>
             </React.Fragment>
         )
     }
