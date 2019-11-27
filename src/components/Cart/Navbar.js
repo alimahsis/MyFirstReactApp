@@ -12,19 +12,19 @@ class Navbar extends Component {
     render() {
         const { totalProduct, onInsert } = this.props;
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="card-header text-right">
                 <span className="navbar-brand" href="#">
-                    products 
-                    <span style={{marginLeft:10}} className="badge badge-pill badge-dark">
+                    کالاها 
+                    <span style={{marginRight:10}} className="badge badge-pill badge-dark">
                         {totalProduct}
                     </span>
                 </span>
                 <button
-                    className="btn btn-sm btn-success"
+                    className="btn btn-md btn-success float-left"
                     onClick={()=>onInsert('Enter title here...', 1)}
                     type="button"
-                    style={{float: 'right'}}
-                >Insert Product</button>
+                    style={{float: 'left'}}
+                >افزودن کالا</button>
             </nav>
         )
     }

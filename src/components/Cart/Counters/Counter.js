@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Counter extends Component {
     getBadgeClass() {
-        return "badge m-3 p-2 " + ( this.props.counter.value === 0 ? "badge-secondary" : "badge-primary");
+        return "badge m-1 p-2 float-right " + ( this.props.counter.value === 0 ? "badge-secondary" : "badge-primary");
     }
 
     render() {
@@ -14,13 +14,14 @@ class Counter extends Component {
             lineHeight: '20px',
             color: '#fff',
             fontWeight: 'bold',
-            float: 'right'
+            borderRadius: '0',
+            margin: '0 !important'
         }
 
         return (
             <li className="list-group-item">
                 <input
-                    className="form-control"
+                    className="form-control float-right"
                     value={counter.title}
                     style={{
                         display: 'inline-block',
@@ -30,9 +31,11 @@ class Counter extends Component {
                     onChange={e => onChangeTitle(counter, e.target.value)}
                 ></input>
                 <span className={this.getBadgeClass()}>{counter.value}</span>
-                <span style={btn_style} className="btn m-1 btn-danger" onClick={()=>onDelete(counter.id)}>×</span>
-                <span style={btn_style} className="btn m-1 btn-warning" onClick={()=>onDecrement(counter)}>-</span>
-                <span style={btn_style} className="btn m-1 btn-success" onClick={()=>onIncrement(counter)}>+</span>
+                <div class="btn-group rounded overflow-hidden" style={{float: 'left'}}>
+                    <span style={btn_style} className="btn btn-danger" onClick={()=>onDelete(counter.id)}>×</span>
+                    <span style={btn_style} className="btn btn-warning" onClick={()=>onDecrement(counter)}>-</span>
+                    <span style={btn_style} className="btn btn-success" onClick={()=>onIncrement(counter)}>+</span>
+                </div>
             </li>
         )
     }

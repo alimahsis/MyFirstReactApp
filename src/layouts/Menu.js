@@ -14,21 +14,21 @@ class Menu extends Component {
     render() {
         return (
             <>
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand as={Link} to="/" >اولین پروژه من در ری اکت</Navbar.Brand>
-                    <Navbar.Collapse>
-                        <Nav className="mr-auto">
+                <Navbar bg="dark" variant="dark" className="flex-row-reverse">
+                    <Navbar.Brand as={Link} to="/" style={{margin: "0 0 0 1em"}}>اولین پروژه من در ری اکت</Navbar.Brand>
+                    <Navbar.Collapse className="justify-content-end">
+                        <Nav className="flex-row-reverse">
                             <NavItem eventkey={1} href="/">
-                                <Nav.Link as={Link} to="/" active>خانه</Nav.Link>
-                            </NavItem>
-                            <NavItem eventkey={2} href="/cart">
-                                <Nav.Link as={Link} to="/cart">سبدخرید</Nav.Link>
+                                <Nav.Link as={Link} to="/">خانه</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={3} href="/pricing">
-                                <Nav.Link as={Link} to="/pricing">قیمت گذاری</Nav.Link>
+                                <Nav.Link as={Link} to="/pricing">تعرفه</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={4} href="/currencyConverter">
                                 <Nav.Link as={Link} to="/currencyConverter">تبدیل ارز</Nav.Link>
+                            </NavItem>
+                            <NavItem eventkey={2} href="/cart">
+                                <Nav.Link as={Link} to="/cart">سبد</Nav.Link>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import '../cover.css'
 
 class Home extends Component {
     constructor(props) {

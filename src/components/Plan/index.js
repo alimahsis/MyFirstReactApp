@@ -22,10 +22,9 @@ class Index extends Component {
                 </div>
                 <div className="card-body">
                     <h1 className="card-title pricing-card-title">{data.price}{data.currency} <small className="text-muted">/ {data.duration}</small></h1>
-                    <ul className="list-unstyled mt-3 mb-4">
+                    <ul className="list-unstyled mt-3 mb-4" style={{paddingRight:0}}>
                         {data.options.map(o=>{
-                            const tag = "<li>"+{o}+"</li>";
-                            return tag;
+                            return <li>{o}</li>;
                         })}
                     </ul>
                     <button type="button" className={this.planClass()}>{data.button.caption}</button>
