@@ -17,3 +17,8 @@ After Edit:
 Add Pc:
 	git clone --depth 1 https://github.com/alimahsis/MyFirstReactApp.git
 
+Get New Files:
+	git pull
+	npm install
+	npm update
+

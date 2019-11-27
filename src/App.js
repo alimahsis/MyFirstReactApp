@@ -17,7 +17,7 @@ class App extends Component {
       <>
         <BrowserRouter>
           <Menu></Menu>
-          <main className="container">
+          <main className="container" style={{direction: 'rtl'}}>
             <Router></Router>
           </main>
         </BrowserRouter>

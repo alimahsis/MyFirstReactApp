@@ -15,20 +15,20 @@ class Menu extends Component {
         return (
             <>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand as={Link} to="/" >My First React App</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" >اولین پروژه من در ری اکت</Navbar.Brand>
                     <Navbar.Collapse>
                         <Nav className="mr-auto">
                             <NavItem eventkey={1} href="/">
-                                <Nav.Link as={Link} to="/" active>Home</Nav.Link>
+                                <Nav.Link as={Link} to="/" active>خانه</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={2} href="/cart">
-                                <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+                                <Nav.Link as={Link} to="/cart">سبدخرید</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={3} href="/pricing">
-                                <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
+                                <Nav.Link as={Link} to="/pricing">قیمت گذاری</Nav.Link>
                             </NavItem>
                             <NavItem eventkey={4} href="/currencyConverter">
-                                <Nav.Link as={Link} to="/currencyConverter">Currency Converter</Nav.Link>
+                                <Nav.Link as={Link} to="/currencyConverter">تبدیل ارز</Nav.Link>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>

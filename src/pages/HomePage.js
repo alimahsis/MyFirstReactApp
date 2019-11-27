@@ -12,12 +12,12 @@ class Home extends Component {
     render() {
         return (
             <>
-            <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center" style={{maxWidth: '39em'}}>
+            <div className="cover-container d-flex w-100 h-100 p-3 m-5 mx-auto flex-column text-center" style={{maxWidth: '39em'}}>
                 <main role="main" className="inner cover">
-                    <h1 className="cover-heading">Cover your page.</h1>
-                    <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                    <h1 className="cover-heading">صفحه اصلی</h1>
+                    <p className="lead">این صفحه صرفاً جهت آزمایش و شروع به کار است.</p>
                     <p className="lead">
-                        <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
+                        <a href="#" className="btn btn-lg btn-secondary">باشه</a>
                     </p>
                 </main>
             </div>

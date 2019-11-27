@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Plan from '../components/Plan'
 
 class Pricing extends Component {
     constructor(props) {
@@ -6,13 +7,14 @@ class Pricing extends Component {
 
         this.state = {
             pageTitle: "Pricing",
-            description: "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.",
+            description: "با این مثال سریعاً یک جدول قیمت گذاری موثر برای مشتریان بالقوه خود بسازید. با اجزای پیش فرض و برنامه های کاربردی و با سفارشی سازی کمی ساخته شده است",
             plans: [
                 {
                     id: 1,
-                    title: 'Free=',
+                    title: 'رایگان',
                     price: '0',
-                    duration: 'mo',
+                    currency: "تومان",
+                    duration: 'ماه',
                     options: [
                         "10 users included",
                         "2 GB of storage",
@@ -29,6 +31,7 @@ class Pricing extends Component {
                     id: 2,
                     title: 'Pro',
                     price: '15',
+                    currency: "تومان",
                     duration: 'mo',
                     options: [
                         "20 users included",
@@ -46,6 +49,7 @@ class Pricing extends Component {
                     id: 3,
                     title: 'Free',
                     price: '0',
+                    currency: "تومان",
                     duration: 'mo',
                     options: [
                         "30 users included",
@@ -73,21 +77,9 @@ class Pricing extends Component {
                 
                 <div className="card-deck mb-3 text-center">
                     
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-header">
-                            <h4 className="my-0 font-weight-normal">Free</h4>
-                        </div>
-                        <div className="card-body">
-                            <h1 className="card-title pricing-card-title">$0 <small className="text-muted">/ mo</small></h1>
-                            <ul className="list-unstyled mt-3 mb-4">
-                            <li>10 users included</li>
-                            <li>2 GB of storage</li>
-                            <li>Email support</li>
-                            <li>Help center access</li>
-                            </ul>
-                            <button type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-                        </div>
-                    </div>
+                    {this.state.plans.map(plan => {
+                        return <Plan data={plan}></Plan>
+                    })}
                     
                 </div>
             </>
