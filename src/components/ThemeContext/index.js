@@ -6,12 +6,37 @@ const ThemeConsumer = ThemeContext.Consumer;
 
 let defaultTheme = {
   bgMenu: "dark",
-  variantMenu: "dark"
+  variantMenu: "dark",
+  handleChange: newTheme => {
+    return (defaultTheme = {
+      bgMenu: newTheme.bgMenu,
+      variantMenu: newTheme.variantMenu
+    });
+  }
 };
 
-// handleChangeTheme = new => {
-//     defaultTheme = { bgMenu: new.bgMenu, variantMenu: new.variantMenu }
-// };
+// class index extends Component {
+//   constructor(props) {
+//     super(props);
 
-export { ThemeProvider, ThemeConsumer, defaultTheme }; // , handleChangeTheme
-export default ThemeContext;
+//     this.state = {
+//       theme: {
+//         bgMenu: "dark",
+//         variantMenu: "dark",
+//         handleChange: newTheme => {
+//           return {
+//             bgMenu: newTheme.bgMenu,
+//             variantMenu: newTheme.variantMenu
+//           };
+//         }
+//       }
+//     };
+//   }
+
+//   getTheme = () => {
+//     return this.state.theme;
+//   };
+// }
+
+export { ThemeProvider, ThemeConsumer, defaultTheme }; //ThemeContext
+export default ThemeContext; // index

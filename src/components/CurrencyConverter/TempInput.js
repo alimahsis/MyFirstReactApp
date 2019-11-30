@@ -9,10 +9,10 @@ class TempInput extends Component {
   }
 
   render() {
-    const { id, type, placeholder, value, onChange } = this.props;
+    const { id, type, placeholder, value, disabled, onChange } = this.props;
     return (
       <>
-        <InputGroup className="mb-6">
+        <InputGroup>
           <InputGroup.Prepend>
             <InputGroup.Text id={`tempInput${id}`}>{type}</InputGroup.Text>
           </InputGroup.Prepend>
@@ -22,6 +22,7 @@ class TempInput extends Component {
             value={value === 0 ? "" : value}
             aria-label={type}
             onChange={onChange}
+            disabled={disabled}
             aria-describedby={`tempInput${id}`}
           />
         </InputGroup>

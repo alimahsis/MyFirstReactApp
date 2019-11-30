@@ -1,0 +1,23 @@
+﻿Error Boundry
+نمایش ارور در صورتی که فی خالی بود و عدد Infinity و 
+Refs
+Higher Order Components
+async
+	func
+	programming
+promis
+async in es6
+async event in react
+header status code
+axios
+	then
+	catcha
+نمایش ارور در صورتی که اتصال به api برقرار نشد ( با Error Boundry )
+redux ~
+
+advance:
+	Error Boundaries
+	Forwarding Refs
+	Fragments *
+	Higher-Order Components *
+	Reconciliation

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {} from "react-bootstrap";
+// import {} from "react-bootstrap";
+import ThemeContext from "../components/ThemeContext";
 
 class ThemePage extends Component {
   constructor(props) {
@@ -19,7 +20,17 @@ class ThemePage extends Component {
           <p className="lead">{this.state.description}</p>
         </div>
 
-        <div className="card-deck mb-3 text-center"></div>
+        <div className="mb-3 text-center">
+          <p className="lead">
+            <a
+              href="#"
+              className="btn btn-lg btn-secondary"
+              // onClick={ThemeContext}
+            >
+              جهت تغییر تم منو کلیک کنید
+            </a>
+          </p>
+        </div>
       </>
     );
   }
