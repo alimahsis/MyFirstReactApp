@@ -22,10 +22,8 @@ class index extends Component {
 
   render() {
     const { value, convertTo } = this.state,
-      dolar =
-        convertTo === "dolar" ? this.convertCurrency("dolar", value) : value,
-      toman =
-        convertTo === "toman" ? this.convertCurrency("toman", value) : value;
+      dolar = convertTo === "dolar" ? this.convertCurrency("dolar", value) : value,
+      toman = convertTo === "toman" ? this.convertCurrency("toman", value) : value;
 
     return (
       <>
