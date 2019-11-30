@@ -1,26 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+
+const thisContext = React.createContext;
+// const ThemeProvider = thisContext.Provider;
+// const ThemeConsumer = thisContext.Consumer;
 
 class index extends Component {
-    constructor(props) {
-        super(props);
+  static contextType = React.createContext;
+  static ThemeProvider = thisContext.Provider;
 
-        const themeContext = React.createContext;
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            theme: 'dark',
-            showToolbox: true
-        }
-    }
+    this.state = {
+      theme: "dark",
+      showToolbox: true
+    };
+  }
 
-    render() {
-        return (
-            <>
-                <themeContext.Provider value={this.state}>
-                    {this.props.children}
-                </themeContext.Provider>
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <ThemeProvider value="dark">{this.props.children}</ThemeProvider>
+      </>
+    );
+  }
 }
 
-export default index
+// export { ThemeProvider, ThemeConsumer };
+export default index;
