@@ -2,29 +2,22 @@ import React, { Component } from "react";
 import Menu from "./layouts/Menu";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
-import { ThemeProvider } from "./components/ThemeContext";
+import { ThemeProvider, defaultTheme } from "./components/ThemeContext";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      theme: {
-        bgMenu: "dark",
-        variantMenu: "dark"
-      }
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <>
-        <ThemeProvider value={this.state.theme}>
+        <ThemeProvider value={defaultTheme}>
           <BrowserRouter>
             <Menu></Menu>
-            <main className="container" style={{ direction: "rtl" }}>
-              <Router></Router>
-            </main>
+            <Router></Router>
           </BrowserRouter>
         </ThemeProvider>
       </>

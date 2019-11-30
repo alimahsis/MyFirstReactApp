@@ -45,6 +45,11 @@ class Menu extends Component {
                       سبد
                     </Nav.Link>
                   </NavItem>
+                  <NavItem eventkey={2} href="/theme">
+                    <Nav.Link as={Link} to="/theme">
+                      تم
+                    </Nav.Link>
+                  </NavItem>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
