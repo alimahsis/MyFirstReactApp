@@ -3,6 +3,7 @@ import Menu from "./layouts/Menu";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import { ThemeProvider, defaultTheme } from "./components/ThemeContext"; // ThemeContext
+import ErrorBoundry from "./layouts/ErrorBoundry";
 
 class App extends Component {
   constructor(props) {
@@ -16,12 +17,14 @@ class App extends Component {
   render() {
     return (
       <>
-        <ThemeProvider value={defaultTheme}>
-          <BrowserRouter>
-            <Menu></Menu>
-            <Router></Router>
-          </BrowserRouter>
-        </ThemeProvider>
+        <ErrorBoundry>
+          <ThemeProvider value={defaultTheme}>
+            <BrowserRouter>
+              <Menu></Menu>
+              <Router></Router>
+            </BrowserRouter>
+          </ThemeProvider>
+        </ErrorBoundry>
       </>
     );
   }

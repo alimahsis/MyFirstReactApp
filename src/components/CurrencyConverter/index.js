@@ -59,6 +59,8 @@ class index extends Component {
     dolar = this.commafy(dolar);
     currency = this.commafy(currency);
 
+    if (toman == Infinity) throw new Error("مقدار ورودی بسیار زیاد است");
+
     return (
       <>
         <div className="row" style={{ direction: "ltr" }}>

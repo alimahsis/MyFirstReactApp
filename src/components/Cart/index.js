@@ -44,6 +44,8 @@ class Index extends Component {
     if (counters[index].value > 0) {
       counters[index].value--;
       this.setState({ counters });
+    } else {
+      throw new Error("تعداد کالا نمی تواند از صفر کمتر شود");
     }
   };
 
