@@ -1,6 +1,4 @@
-﻿
-تغییر تم
-Higher Order Components
+﻿Higher Order Components
 async
 	func
 	programming
