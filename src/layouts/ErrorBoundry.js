@@ -1,30 +1,36 @@
 import React, { Component } from "react";
 import ErrorPage from "../pages/ErrorPage";
+
 class ErrorBoundry extends Component {
   constructor(props) {
     super(props);
     this.state = {
       hasError: false,
-      error: null
+      errorObj: null
     };
   }
 
   static getDerivedStateFromError(error) {
-    // console.log(error);
-    return { hasError: true, error: error };
+    return { hasError: true, errorObj: error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    // logErrorToMyService(error, errorInfo);
   }
 
   render() {
-    return (
-      <>
-        {this.state.hasError ? (
-          <ErrorPage error={this.state.error}></ErrorPage>
-        ) : (
-          this.props.children
-        )}
-      </>
-    );
+    if (this.state.hasError) {
+      return <ErrorPage errorObj={this.state.errorObj}></ErrorPage>;
+    } else {
+      return <>{this.props.children}</>;
+    }
   }
 }
+
+window.onerror = error => {
+  // You can also log the error to an error reporting service
+  // logErrorToMyService(error);
+};
 
 export default ErrorBoundry;

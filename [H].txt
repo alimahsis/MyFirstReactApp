@@ -1,6 +1,5 @@
-﻿Error Boundry
-نمایش ارور در صورتی که فی خالی بود و عدد Infinity و 
-Refs
+﻿
+تغییر تم
 Higher Order Components
 async
 	func
@@ -21,3 +20,5 @@ advance:
 	Fragments *
 	Higher-Order Components *
 	Reconciliation
+
+افزودن امکان چندزبانه به سایت

@@ -14,7 +14,7 @@ class Menu extends Component {
     return (
       <>
         <ThemeConsumer>
-          {theme => (
+          {({ theme, changeTheme }) => (
             <Navbar
               bg={theme.bgMenu}
               variant={theme.variantMenu}

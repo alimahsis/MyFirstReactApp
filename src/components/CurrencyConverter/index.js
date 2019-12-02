@@ -71,6 +71,7 @@ class index extends Component {
               placeholder="مقدار به دلار"
               value={dolar}
               onChange={this.handleChange}
+              autoFocus
             ></TempInput>
           </div>
           <div className="col-md">

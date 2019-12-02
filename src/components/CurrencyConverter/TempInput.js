@@ -8,6 +8,10 @@ class TempInput extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    if (this.props.ref) this.props.ref.current.focus();
+  }
+
   render() {
     const { id, type, placeholder, value, disabled, onChange } = this.props;
     return (
@@ -24,6 +28,7 @@ class TempInput extends Component {
             onChange={onChange}
             disabled={disabled}
             aria-describedby={`tempInput${id}`}
+            autoFocus={this.props.autoFocus}
           />
         </InputGroup>
       </>
