@@ -1,22 +1,25 @@
-﻿Higher Order Components
-async
-	func
-	programming
-promis
-async in es6
-async event in react
+﻿
+promis + async + async event in react
 header status code
-axios
-	then
-	catcha
-نمایش ارور در صورتی که اتصال به api برقرار نشد ( با Error Boundry )
 redux ~
 
+codepen.io -> React
+
+React in Youtube
+
+adoptive responsive
+css in js by "glamor" , "styled" , "aprodite"
+GraphQL
+Apolo
+
+Polacode ( code screenshot )
+
+postman
+token in programing
+
+webpack & chunk chunk
+
 advance:
-	Error Boundaries
-	Forwarding Refs
-	Fragments *
 	Higher-Order Components *
 	Reconciliation
-
-افزودن امکان چندزبانه به سایت
+	Hooks

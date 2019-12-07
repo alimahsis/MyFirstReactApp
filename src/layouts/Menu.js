@@ -50,6 +50,11 @@ class Menu extends Component {
                       تم
                     </Nav.Link>
                   </NavItem>
+                  <NavItem eventkey={2} href="/applications">
+                    <Nav.Link as={Link} to="/applications">
+                      برنامه ها
+                    </Nav.Link>
+                  </NavItem>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
