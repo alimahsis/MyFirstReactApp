@@ -4,34 +4,30 @@ const ThemeContext = React.createContext();
 const ThemeConsumer = ThemeContext.Consumer;
 
 class ThemeProvider extends Component {
-    constructor(props) {
-        super(props);
+    state = {
+        theme: { bgMenu: "dark", variantMenu: "dark" },
+        changeTheme: newTheme => {
+            this.setState({ newTheme });
+        }
+    };
 
-        this.state = {
-            theme: {
-                bgMenu: "dark",
-                variantMenu: "dark"
-            },
-            changeTheme: newTheme => {
-                this.setState({ newTheme });
-            }
-        };
+    componentDidUpdate() {
+        localStorage.setItem("theme", JSON.stringify(this.state));
+    }
+
+    componentDidMount() {
+        this.setState(JSON.parse(localStorage.getItem("theme")));
     }
 
     changeTheme = event => {
         const { name, value } = event.target,
-            { bgMenu, variantMenu } = this.state.theme;
+            { bgMenu, variantMenu } = this.state.theme,
+            theme = {
+                bgMenu: name === "bgMenu" ? value : bgMenu,
+                variantMenu: name === "variantMenu" ? value : variantMenu
+            };
 
-        const theme = {
-            bgMenu: name === "bgMenu" ? value : bgMenu,
-            variantMenu: name === "variantMenu" ? value : variantMenu
-        };
-
-        this.setState({
-            theme
-        });
-
-        console.log(this.state);
+        this.setState({ theme });
     };
 
     render() {

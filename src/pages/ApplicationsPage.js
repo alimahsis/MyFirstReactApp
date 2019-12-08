@@ -10,9 +10,7 @@ class AplicationsPage extends Component {
 
     componentDidMount() {
         axios
-            .get(
-                "https://a.anardoni.com/packs/dzVxvUe?population=_applications"
-            )
+            .get("https://a.anardoni.com/packs/dzVxvUe?population=_applications")
             .then(res => {
                 this.setState({ apps: res.data._applications });
             })
@@ -23,8 +21,8 @@ class AplicationsPage extends Component {
 
     renderApps = apps => {
         return apps.map(app => (
-            <Col xs="3" style={{ marginBottom: "30px" }}>
-                <AppCard value={app} key={app.id}></AppCard>
+            <Col key={app.id} xs="3" style={{ marginBottom: "30px" }}>
+                <AppCard value={app}></AppCard>
             </Col>
         ));
     };
@@ -32,10 +30,7 @@ class AplicationsPage extends Component {
     render() {
         const { apps } = this.state;
         return (
-            <Row
-                className="text-right"
-                style={{ marginTop: "30px", direction: "rtl" }}
-            >
+            <Row className="text-right" style={{ marginTop: "30px", direction: "rtl" }}>
                 {apps ? this.renderApps(apps) : "loading..."}
             </Row>
         );

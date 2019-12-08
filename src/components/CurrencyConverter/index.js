@@ -2,38 +2,19 @@ import React, { Component } from "react";
 import TempInput from "./TempInput";
 
 class index extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            convertTo: "",
-            value: 0,
-            currency: 12000
-        };
-    }
+    state = { convertTo: "", value: 0, currency: 12000 };
 
     handleChange = e => {
         const convertTo = e.target.id === "dolar" ? "toman" : "dolar";
-        this.setState({
-            convertTo: convertTo,
-            value: this.uncommafy(e.target.value) || 0
-        });
+        this.setState({ convertTo: convertTo, value: this.uncommafy(e.target.value) || 0 });
     };
 
     handleChangeCurrency = e => {
-        this.setState({
-            currency: this.uncommafy(e.target.value) || 0
-        });
+        this.setState({ currency: this.uncommafy(e.target.value) || 0 });
     };
 
     convertCurrency(convertTo, value) {
-        // let value = this.uncommafy(value);
-        // let convertTo = this.uncommafy(convertTo);
-        return (
-            (convertTo === "dolar"
-                ? value / this.state.currency
-                : value * this.state.currency) || 0
-        );
+        return (convertTo === "dolar" ? value / this.state.currency : value * this.state.currency) || 0;
     }
 
     commafy(num) {
@@ -49,14 +30,8 @@ class index extends Component {
     render() {
         const { value, convertTo } = this.state;
 
-        var dolar =
-            convertTo === "dolar"
-                ? this.convertCurrency("dolar", value)
-                : value;
-        var toman =
-            convertTo === "toman"
-                ? this.convertCurrency("toman", value)
-                : value;
+        var dolar = convertTo === "dolar" ? this.convertCurrency("dolar", value) : value;
+        var toman = convertTo === "toman" ? this.convertCurrency("toman", value) : value;
         var currency = this.state.currency;
 
         toman = this.commafy(toman);

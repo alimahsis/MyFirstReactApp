@@ -3,32 +3,26 @@ import Counters from "./Counters";
 import Navbar from "./Navbar";
 
 class Index extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            counters: [
-                { id: 1, title: "product one", value: 2 },
-                { id: 2, title: "product two", value: 1 },
-                { id: 3, title: "product three", value: 0 },
-                { id: 4, title: "product four", value: 1 },
-                { id: 5, title: "product five", value: 2 }
-            ]
-        };
-    }
+    state = {
+        counters: [
+            { id: 1, title: "product one", value: 2 },
+            { id: 2, title: "product two", value: 1 },
+            { id: 3, title: "product three", value: 0 },
+            { id: 4, title: "product four", value: 1 },
+            { id: 5, title: "product five", value: 2 }
+        ]
+    };
 
     componentDidUpdate() {
-        localStorage.setItem("state", JSON.stringify(this.state));
+        localStorage.setItem("cart", JSON.stringify(this.state));
     }
 
     componentDidMount() {
-        this.setState(JSON.parse(localStorage.getItem("state")));
+        this.setState(JSON.parse(localStorage.getItem("cart")));
     }
 
     handleDelete = counterId => {
-        this.setState({
-            counters: this.state.counters.filter(c => c.id !== counterId)
-        });
+        this.setState({ counters: this.state.counters.filter(c => c.id !== counterId) });
     };
 
     handleIncrement = counterId => {
@@ -52,10 +46,7 @@ class Index extends Component {
     handleInsert = (title, value) => {
         const counters = [...this.state.counters];
         counters.push({
-            id:
-                counters.length !== 0
-                    ? counters[counters.length - 1].id + 1
-                    : 1,
+            id: counters.length !== 0 ? counters[counters.length - 1].id + 1 : 1,
             title: title,
             value: value
         });
@@ -73,9 +64,7 @@ class Index extends Component {
         return (
             <React.Fragment>
                 <Navbar
-                    totalProduct={
-                        this.state.counters.filter(p => p.value > 0).length
-                    }
+                    totalProduct={this.state.counters.filter(p => p.value > 0).length}
                     onInsert={this.handleInsert}
                 ></Navbar>
                 <Counters

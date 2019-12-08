@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-﻿async
-	func
-	programming
-promis
-async in es6
-async event in react
-header status code
-axios
-	then
-	catcha
-=======
-﻿
+﻿﻿
 promis + async + async event in react
 header status code
->>>>>>> fb779b4e708f05a0cd824b55b171378627c92a68
 redux ~
 
 codepen.io -> React
@@ -34,9 +21,3 @@ webpack & chunk chunk
 
 advance:
 	Higher-Order Components *
-<<<<<<< HEAD
-	Reconciliation
-=======
-	Reconciliation
-	Hooks
->>>>>>> fb779b4e708f05a0cd824b55b171378627c92a68
