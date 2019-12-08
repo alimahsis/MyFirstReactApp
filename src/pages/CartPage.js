@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import Cart from '../components/Cart'
-
+import React, { Component } from "react";
+import Cart from "../components/Cart";
 
 class CartPage extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
-        this.state = {
-                 
-        }
+        this.state = {};
     }
 
     render() {
@@ -16,8 +13,8 @@ class CartPage extends Component {
             <>
                 <Cart></Cart>
             </>
-        )
+        );
     }
 }
 
-export default CartPage
+export default CartPage;
