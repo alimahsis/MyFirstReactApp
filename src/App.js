@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./layouts/Menu";
 import { BrowserRouter } from "react-router-dom";
-import Router from "./Router";
+import Router from "./routes/Router";
 import { ThemeProvider } from "./components/ThemeContext";
 import ErrorBoundry from "./layouts/ErrorBoundry";
 
