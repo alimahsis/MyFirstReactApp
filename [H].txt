@@ -1,5 +1,4 @@
-﻿Higher Order Components
-async
+﻿async
 	func
 	programming
 promis
@@ -9,14 +8,8 @@ header status code
 axios
 	then
 	catcha
-نمایش ارور در صورتی که اتصال به api برقرار نشد ( با Error Boundry )
 redux ~
 
 advance:
-	Error Boundaries
-	Forwarding Refs
-	Fragments *
 	Higher-Order Components *
 	Reconciliation
-
-افزودن امکان چندزبانه به سایت
